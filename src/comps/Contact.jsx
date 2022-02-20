@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from './Header'
 import ExternalLink from './ExternalLink'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let socials = [
   {
