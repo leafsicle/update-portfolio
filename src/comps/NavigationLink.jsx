@@ -7,12 +7,12 @@ const NavigationLink = ({ pageName, index }) => {
       to={'/' + pageName}
       tabIndex={index}
       className='text-base font-medium 
+      contrast
       text-indigo-100 
       hover:text-active 
       hover:bg-red
       hover:rounded
       px-5 
-      shadow-sm
       sm:px-4'>
       {pageName}
     </Link>
