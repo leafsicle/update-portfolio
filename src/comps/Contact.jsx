@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 import ExternalLink from './ExternalLink'
 
 let socials = [
@@ -31,7 +30,6 @@ let socials = [
 const Contact = () => {
   return (
     <div className='body bg-secondary contrast text-white lg:text-3xl text-2xl font-sans'>
-      <Header />
       <main className=''>
         {socials.map((social, index) => (
           <ExternalLink socialInfo={social} key={index} />
