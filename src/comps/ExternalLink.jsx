@@ -4,13 +4,13 @@ const ExternalLink = ({ socialInfo }) => {
   return (
     <button
       role='button'
-      className='contrast text-2xl text-white font-sans'
+      className='contrast text-2xl m-2 w-100 text-white font-sans '
       title={'External link to ' + socialInfo.name}>
-      <a target='_blank' rel='noopener' href={socialInfo.url}>
+      <a target='_blank' rel='noopener' href={socialInfo.url} className=''>
         <i
           className={
             socialInfo.icon +
-            'bg-primary text-white rounded-md p-2 m-5 hover:bg-red hover:text-active '
+            'bg-primary text-white rounded-md p-4 w-30px hover:bg-red hover:text-active '
           }
         />
       </a>

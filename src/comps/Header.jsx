@@ -15,18 +15,33 @@ const Header = () => {
         font-sans
         contrast
         hover:text-active
-        border-indigo-100'
+        border-indigo-100 '
       role='navigation'>
       <Link className='text-4xl mr-3' tabIndex={0} to='/'>
         🚀
       </Link>
-
-      {pages.map((page, index) => (
-        <NavigationLink
-          key={index}
-          pageName={page}
-          index={index}></NavigationLink>
-      ))}
+      <nav className='navbar navbar-light bg-light'>
+        <div className='collapse' id='navbarToggleExternalContent3'>
+          {pages.map((page, index) => (
+            <NavigationLink
+              key={index}
+              pageName={page}
+              index={index}></NavigationLink>
+          ))}
+        </div>
+        {/* <div className=' lg:hidden container-fluid'>
+          <button
+            className='navbar-toggler ms-auto'
+            type='button'
+            data-mdb-toggle='collapse'
+            data-mdb-target='#navbarToggleExternalContent3'
+            aria-controls='navbarToggleExternalContent3'
+            aria-expanded='false'
+            aria-label='Toggle navigation'>
+            <i className='fas fa-bars'></i>
+          </button>
+        </div> */}
+      </nav>
     </nav>
   )
 }

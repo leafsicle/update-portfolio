@@ -3,7 +3,7 @@ import Header from './Header'
 
 const About = () => {
   return (
-    <div className='body bg-secondary contrast text-white text-2xl font-sans'>
+    <div className='body bg-secondary contrast text-white lg:text-3xl text-2xl font-sans'>
       <Header />
       <main className=' '>
         <p>This is a story all about how my life got turned all upside down</p>

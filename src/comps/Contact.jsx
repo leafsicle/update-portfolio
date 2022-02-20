@@ -30,7 +30,7 @@ let socials = [
 ]
 const Contact = () => {
   return (
-    <div className='mx-auto body bg-secondary '>
+    <div className='body bg-secondary contrast text-white lg:text-3xl text-2xl font-sans'>
       <Header />
       <main className=''>
         {socials.map((social, index) => (
