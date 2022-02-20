@@ -10,6 +10,7 @@ const NavigationLink = ({ pageName, index }) => {
       text-indigo-100 
       hover:text-active 
       hover:bg-red
+      hover:rounded
       px-5 
       shadow-sm
       sm:px-4'>
