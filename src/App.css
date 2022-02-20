@@ -1,12 +1,10 @@
-.App {
-  text-align: center;
-  font-family: 'Permanent Marker', cursive;
-  list-style: none;
-}
 .body {
   width: 100%;
   height: 100vh;
+  text-align: center;
 
+  font-family: 'Permanent Marker', cursive;
+  list-style: none;
   background-image: linear-gradient(#e0e7ff 0.02em, transparent 0.01em),
     linear-gradient(90deg, #e0e7ff 0.02em, transparent 0.01em);
   background-size: 1em 1em;

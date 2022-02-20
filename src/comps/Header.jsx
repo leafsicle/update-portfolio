@@ -1,22 +1,31 @@
-import NavLink from './NavLink'
+import NavigationLink from './NavigationLink'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
   let pages = ['About', 'Projects', 'Contact']
   return (
-    <div className='App max-w-7xl mx-auto px-4 sm:px-6 bg-blue-900 '>
-      <nav
-        className='flex justify-between items-center border-b-2 border-indigo-100 py-6 md:justify-start md:space-x-10'
-        role='navigation'>
-        <Link className='text-indigo-200 hover:text-emerald-400' to='/'>
-          ICON!!
-        </Link>
+    <nav
+      className='flex justify-start 
+        App bg-primary top-0 w-screen p-6
+        items-center 
+        border-b-2 
+        py-6 
+        md:justify-start
+        hover:text-active
+        text-white
+        border-indigo-100'
+      role='navigation'>
+      <Link className='text-4xl mr-3' tabIndex={0} to='/'>
+        🚀
+      </Link>
 
-        {pages.map((page, index) => (
-          <NavLink key={index} pageName={page}></NavLink>
-        ))}
-      </nav>
-    </div>
+      {pages.map((page, index) => (
+        <NavigationLink
+          key={index}
+          pageName={page}
+          index={index}></NavigationLink>
+      ))}
+    </nav>
   )
 }
 

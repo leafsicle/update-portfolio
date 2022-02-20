@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
-import Content from './comps/About'
+import About from './comps/About'
 import Contact from './comps/Contact'
 
 ReactDOM.render(
@@ -12,7 +12,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='/About' element={<Content />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Projects' element={<About />} />
         <Route path='/Contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>

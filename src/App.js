@@ -1,10 +1,10 @@
 import './App.css'
-import About from './comps/About'
+import Header from './comps/Header'
 
 function App() {
   return (
-    <div className='App bg-blue-900 max-w-7xl mx-auto px-4 sm:px-6 bg-blue-500 min-h-screen'>
-      <About />
+    <div className='body bg-secondary'>
+      <Header />
     </div>
   )
 }
