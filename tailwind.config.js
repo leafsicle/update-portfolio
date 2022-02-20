@@ -11,6 +11,10 @@ module.exports = {
         white: '#F4F4F9',
         active: '#FFC914',
       },
+      fontFamily: {
+        sans: ['Permanent Marker', 'cursive'],
+        serif: ['Permanent Marker', 'cursive'],
+      },
     },
   },
   plugins: [],
