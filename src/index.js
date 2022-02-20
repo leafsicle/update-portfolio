@@ -1,10 +1,10 @@
 import React from 'react'
-import ReactDOM, { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
-import Content from './comps/Content'
+import Content from './comps/About'
 import Contact from './comps/Contact'
 
 ReactDOM.render(
@@ -16,7 +16,6 @@ ReactDOM.render(
         <Route path='/Contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
-    ,
   </React.StrictMode>,
   document.getElementById('root')
 )
