@@ -10,7 +10,7 @@ const ExternalLink = ({ socialInfo }) => {
         <i
           className={
             socialInfo.icon +
-            'bg-primary text-white rounded-md p-4 w-30px hover:bg-red hover:text-active '
+            'bg-primary text-white rounded-sm p-4 w-30px hover:bg-red hover:text-active transition-all hover:rounded-3xl'
           }
         />
       </a>
