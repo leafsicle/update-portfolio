@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import About from './comps/About'
-import Contact from './comps/Contact'
 import Header from './comps/Header'
 
 ReactDOM.render(
@@ -15,8 +14,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/About' element={<About />} />
-        <Route path='/Projects' element={<About />} />
-        <Route path='/Contact' element={<Contact />} />
+        {/* <Route path='/Projects' element={<About />} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

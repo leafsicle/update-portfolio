@@ -2,7 +2,8 @@ import NavigationLink from './NavigationLink'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-  let pages = ['About', 'Projects', 'Contact']
+  let pages = ['About', 'Projects']
+
   return (
     <nav
       className='flex justify-start 
@@ -17,7 +18,7 @@ const Header = () => {
         hover:text-active
         border-indigo-100 '
       role='navigation'>
-      <Link className='text-4xl mr-3' tabIndex={0} to='/'>
+      <Link className='text-5xl mr-3' tabIndex={0} to='/'>
         🚀
       </Link>
       <nav className='navbar navbar-light bg-light'>

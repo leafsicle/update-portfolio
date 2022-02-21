@@ -9,6 +9,7 @@ const NavigationLink = ({ pageName, index }) => {
       className='text-base font-medium 
       contrast
       text-indigo-100 
+      transition-all 
       hover:text-active 
       hover:bg-red
       hover:rounded
