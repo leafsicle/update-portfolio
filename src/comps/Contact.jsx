@@ -26,10 +26,16 @@ let socials = [
     alt: 'External link to Twitter',
     icon: 'fa-brands fa-twitter ',
   },
+  {
+    name: 'Email',
+    url: 'mailto:cookem529@gmail.com?subject= You have a greate looking site!&body=I was checking out your portfolio page and wanted to say hi!',
+    alt: 'External link to open email client',
+    icon: 'fa-solid fa-envelope ',
+  },
 ]
 const Contact = () => {
   return (
-    <div className='body bg-secondary contrast text-white lg:text-3xl text-2xl font-sans'>
+    <div className=' contrast text-white lg:text-3xl text-2xl font-sans'>
       <main className=''>
         {socials.map((social, index) => (
           <ExternalLink socialInfo={social} key={index} />
