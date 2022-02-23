@@ -5,13 +5,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import About from './comps/About'
-import Header from './comps/Header'
 import Projects from './comps/Projects'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/About' element={<About />} />

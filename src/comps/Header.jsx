@@ -1,49 +1,92 @@
 import NavigationLink from './NavigationLink'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const Header = () => {
-  let pages = ['About', 'Projects']
+  const navigation = [
+    { name: 'About', pageName: '/About', current: true },
+    { name: 'Projects', pageName: '/Projects', current: false },
+  ]
+
+  let classNames = (...classes) => {
+    return classes.filter(Boolean).join(' ')
+  }
 
   return (
-    <nav
-      className='flex justify-start 
-        App bg-primary top-0 w-screen p-6
-        md:justify-start
-        items-center 
-        border-b-2 
-        py-6 
-        text-white
-        font-sans
-        contrast
-        hover:text-active
-        border-indigo-100 '
-      role='navigation'>
-      <Link className='text-5xl mr-3' tabIndex={0} to='/'>
-        🚀
-      </Link>
-      <nav className='navbar navbar-light bg-light'>
-        <div className='collapse' id='navbarToggleExternalContent3'>
-          {pages.map((page, index) => (
-            <NavigationLink
-              key={index}
-              pageName={page}
-              index={index}></NavigationLink>
-          ))}
-        </div>
-        {/* <div className=' lg:hidden container-fluid'>
-          <button
-            className='navbar-toggler ms-auto'
-            type='button'
-            data-mdb-toggle='collapse'
-            data-mdb-target='#navbarToggleExternalContent3'
-            aria-controls='navbarToggleExternalContent3'
-            aria-expanded='false'
-            aria-label='Toggle navigation'>
-            <i className='fas fa-bars'></i>
-          </button>
-        </div> */}
-      </nav>
-    </nav>
+    <Disclosure
+      as='nav'
+      className='bg-primary 
+      text-white
+      font-sans
+      contrast
+      hover:text-active
+      border-indigo-100
+      border-b-2 
+      border-dashed'>
+      {({ open }) => (
+        <>
+          <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+            <div className='relative flex items-center justify-between h-16'>
+              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+                {/* Mobile menu button*/}
+                <Disclosure.Button
+                  className='inline-flex 
+                  items-center 
+                  justify-center 
+                  p-2 
+                  rounded-md 
+                  focus:outline-none 
+                  focus:ring-2 
+                  focus:ring-inset 
+                  focus:ring-white 
+                  focus:decoration-dashed'>
+                  <span className='sr-only'>Open main menu</span>
+                  {open ? (
+                    <XIcon className='block h-6 w-6' aria-hidden='true' />
+                  ) : (
+                    <MenuIcon className='block h-6 w-6' aria-hidden='true' />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
+                <div className='flex-shrink-0 flex items-center'>
+                  <Link
+                    className='text-3xl sm:text-4xl md:text-5xl mr-3'
+                    to='/'>
+                    🚀
+                  </Link>
+                </div>
+                <div className='hidden sm:block sm:ml-6'>
+                  <div className='flex space-x-4'>
+                    {navigation.map(navLink => (
+                      <NavigationLink
+                        key={navLink.name}
+                        pageName={navLink.pageName}
+                        aria-current={
+                          navLink.current ? 'page' : undefined
+                        }></NavigationLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Disclosure.Panel className='sm:hidden'>
+            <div className='px-2 pt-2 pb-3 space-y-1'>
+              {navigation.map(item => (
+                <NavigationLink
+                  key={item.name}
+                  pageName={item.href}
+                  aria-current={
+                    item.current ? 'page' : undefined
+                  }></NavigationLink>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   )
 }
 

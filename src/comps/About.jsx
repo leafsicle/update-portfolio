@@ -1,8 +1,10 @@
 import React from 'react'
+import Header from './Header'
 
 const About = () => {
   return (
-    <main className='body bg-secondary contrast text-white lg:text-3xl text-xl font-sans pt-3 flex flex-col'>
+    <main className='body bg-secondary bg-repeat-ycontrast text-white lg:text-3xl text-xl font-sans  flex flex-col'>
+      <Header />
       <p className='bg-black mt-5 mx-5 text-center bg-opacity-50 rounded-md border-white border-4 border-dashed '>
         About Me
       </p>
