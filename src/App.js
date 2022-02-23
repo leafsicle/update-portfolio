@@ -13,7 +13,7 @@ function App() {
       </section>
       <Contact />
 
-      <main className='mb-5 mt-10 w-1/4 mx-auto object-contain'>
+      <main className='mb-5 mt-10 w-1/2 sm:w-1/3 md:1/4 lg:1/4 mx-auto object-contain '>
         <img
           src={image}
           alt='Matt Cooke.'

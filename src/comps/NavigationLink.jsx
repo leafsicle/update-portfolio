@@ -14,6 +14,9 @@ const NavigationLink = ({ pageName }) => {
       hover:text-active 
       hover:bg-red
       hover:rounded
+     border-2
+      border-white
+      border-dashed
       lg:text-xl
       px-5 
       sm:px-4'>
