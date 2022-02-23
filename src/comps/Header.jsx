@@ -26,9 +26,9 @@ const Header = () => {
       border-dashed'>
       {({ open }) => (
         <>
-          <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+          <div className=' mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
-              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+              <div className='inset-y-0 left-0 flex items-center sm:hidden'>
                 {/* Mobile menu button*/}
                 <Disclosure.Button
                   className='inline-flex 
@@ -49,7 +49,7 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
+              <div className='flex-1 flex items-center justify-center sm:justify-start md:justify-start '>
                 <div className='flex-shrink-0 flex items-center'>
                   <Link
                     className='text-3xl sm:text-4xl md:text-5xl mr-3'
@@ -72,12 +72,12 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <Disclosure.Panel className='sm:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1'>
+          <Disclosure.Panel className='sm:hidden '>
+            <div className='px-2 pt-2 pb-3 space-y-4'>
               {navigation.map(item => (
                 <NavigationLink
                   key={item.name}
-                  pageName={item.href}
+                  pageName={item.pageName}
                   aria-current={
                     item.current ? 'page' : undefined
                   }></NavigationLink>
