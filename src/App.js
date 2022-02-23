@@ -16,7 +16,7 @@ function App() {
       <main className='mb-5 mt-10 w-1/4 mx-auto object-contain'>
         <img
           src={image}
-          alt='Image of Me. Matt Cooke.'
+          alt='Matt Cooke.'
           title='Did you come here looking for something fun after being trained for over a decade by XKCD? 🥚'
           className='border-4 border-dashed '
         />

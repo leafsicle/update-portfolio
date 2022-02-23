@@ -1,6 +1,6 @@
 import NavigationLink from './NavigationLink'
-import { Link, useLocation } from 'react-router-dom'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Link } from 'react-router-dom'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const Header = () => {
@@ -8,10 +8,6 @@ const Header = () => {
     { name: 'About', pageName: '/About', current: true },
     { name: 'Projects', pageName: '/Projects', current: false },
   ]
-
-  let classNames = (...classes) => {
-    return classes.filter(Boolean).join(' ')
-  }
 
   return (
     <Disclosure
